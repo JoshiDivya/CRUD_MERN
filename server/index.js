@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri =
-  "mongodb+srv://<UserName>:<Password>@crud.mongodb.net/collection_name?retryWrites=true&w=majority";
+Process.env.MONGODB_URI
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
